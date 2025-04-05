@@ -1,1 +1,65 @@
+/* Admin Dashboard Specific Styles */
 
+/* Inherit all vendor styles and add admin-specific overrides */
+.admin-stat-card {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.admin-stat-card h3 {
+    font-size: 14px;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.admin-stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-approve {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btn-reject {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
