@@ -130,7 +130,7 @@ nav ul li a:hover {
 /* Auth Links */
 .auth-link {
     padding: 1px 1px;
-    border-radius: 2px;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
