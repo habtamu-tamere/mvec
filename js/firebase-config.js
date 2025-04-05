@@ -1,10 +1,11 @@
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBbgeF-caUZf0NjGx_UGNb1xhufL345VWQ",
+    authDomain: "emart-13014.firebaseapp.com",
+    projectId: "emart-13014",
+    storageBucket: "emart-13014.firebasestorage.app",
+    messagingSenderId: "198780629457",
+    appId: "1:198780629457:web:e27d80975110cd487670f0",
+    measurementId: "G-BN6EHEGFR1"
 };
 
 // Initialize Firebase
