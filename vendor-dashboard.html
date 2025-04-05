@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">MarketPlace</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="vendor-dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="vendor-products.html">Products</a></li>
+                    <li><a href="vendor-orders.html">Orders</a></li>
+                    <li id="authLink"><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container dashboard-container">
+        <aside class="dashboard-sidebar">
+            <h3>Vendor Panel</h3>
+            <ul class="sidebar-menu">
+                <li><a href="vendor-dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="vendor-products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="vendor-orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                <li><a href="vendor-sales.html"><i class="fas fa-chart-line"></i> Sales & Earnings</a></li>
+                <li><a href="vendor-payouts.html"><i class="fas fa-money-bill-wave"></i> Payouts</a></li>
+                <li><a href="vendor-promotions.html"><i class="fas fa-tag"></i> Promotions</a></li>
+                <li><a href="vendor-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Vendor Dashboard</h2>
+                <div class="vendor-status">
+                    <span class="status-badge active">Active</span>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Today's Sales</h3>
+                    <p id="todaySales">ETB 0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>This Week</h3>
+                    <p id="weekSales">ETB 0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>This Month</h3>
+                    <p id="monthSales">ETB 0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Products</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Recent Orders</h3>
+                <div class="table-container">
+                    <table id="vendorOrdersTable">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <a href="vendor-orders.html" class="btn-secondary">View All Orders</a>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Your Products</h3>
+                <div class="table-container">
+                    <table id="vendorProductsTable">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <a href="vendor-products.html" class="btn-primary">Add New Product</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Vendor Support</h3>
+                <p>Email: vendors@marketplace.com</p>
+                <p>Phone: +251 912 345 678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/vendor.js"></script>
+</body>
+</html>
