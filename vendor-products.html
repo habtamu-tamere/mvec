@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products | Vendor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">MarketPlace</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="vendor-dashboard.html">Dashboard</a></li>
+                    <li><a href="vendor-products.html" class="active">Products</a></li>
+                    <li><a href="vendor-orders.html">Orders</a></li>
+                    <li id="authLink"><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container dashboard-container">
+        <aside class="dashboard-sidebar">
+            <h3>Vendor Panel</h3>
+            <ul class="sidebar-menu">
+                <li><a href="vendor-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="vendor-products.html" class="active"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="vendor-orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                <li><a href="vendor-sales.html"><i class="fas fa-chart-line"></i> Sales & Earnings</a></li>
+                <li><a href="vendor-payouts.html"><i class="fas fa-money-bill-wave"></i> Payouts</a></li>
+                <li><a href="vendor-promotions.html"><i class="fas fa-tag"></i> Promotions</a></li>
+                <li><a href="vendor-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Manage Products</h2>
+                <a href="vendor-add-product.html" class="btn-primary">Add New Product</a>
+            </div>
+
+            <div class="product-filters">
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter">
+                        <option value="all">All</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="outofstock">Out of Stock</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <!-- Filled by JavaScript -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchFilter">Search:</label>
+                    <input type="text" id="searchFilter" placeholder="Product name...">
+                </div>
+                <button id="applyFilters" class="btn-secondary">Apply</button>
+            </div>
+
+            <div class="table-container">
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage" class="btn-secondary" disabled>Previous</button>
+                <span id="pageInfo">Page 1 of 1</span>
+                <button id="nextPage" class="btn-secondary" disabled>Next</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Vendor Support</h3>
+                <p>Email: vendors@marketplace.com</p>
+                <p>Phone: +251 912 345 678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/vendor-products.js"></script>
+</body>
+</html>
