@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders | Vendor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">MarketPlace</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="vendor-dashboard.html">Dashboard</a></li>
+                    <li><a href="vendor-products.html">Products</a></li>
+                    <li><a href="vendor-orders.html" class="active">Orders</a></li>
+                    <li id="authLink"><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container dashboard-container">
+        <aside class="dashboard-sidebar">
+            <h3>Vendor Panel</h3>
+            <ul class="sidebar-menu">
+                <li><a href="vendor-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="vendor-products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="vendor-orders.html" class="active"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                <li><a href="vendor-sales.html"><i class="fas fa-chart-line"></i> Sales & Earnings</a></li>
+                <li><a href="vendor-payouts.html"><i class="fas fa-money-bill-wave"></i> Payouts</a></li>
+                <li><a href="vendor-promotions.html"><i class="fas fa-tag"></i> Promotions</a></li>
+                <li><a href="vendor-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Manage Orders</h2>
+                <div class="order-filters">
+                    <select id="orderStatusFilter">
+                        <option value="all">All Statuses</option>
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <input type="date" id="orderDateFrom">
+                    <input type="date" id="orderDateTo">
+                    <button id="applyOrderFilters" class="btn-secondary">Apply</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="ordersTable">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevOrderPage" class="btn-secondary" disabled>Previous</button>
+                <span id="orderPageInfo">Page 1 of 1</span>
+                <button id="nextOrderPage" class="btn-secondary" disabled>Next</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Vendor Support</h3>
+                <p>Email: vendors@marketplace.com</p>
+                <p>Phone: +251 912 345 678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/vendor-orders.js"></script>
+</body>
+</html>
