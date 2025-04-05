@@ -100,7 +100,7 @@ header .container {
 }
 
 .search-bar button {
-    padding: 10px 15px;
+    padding: 1px 15px;
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -129,7 +129,7 @@ nav ul li a:hover {
 
 /* Auth Links */
 .auth-link {
-    padding: 8px 15px;
+    padding: 1px 5px;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
